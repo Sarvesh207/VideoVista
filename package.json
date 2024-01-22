@@ -1,0 +1,23 @@
+{
+  "name": "playtube",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [
+    "Javascript",
+    "Node",
+    "js"
+  ],
+  "author": "Sarvesh Gaynar",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  },
+  "dependencies": {
+    "prettier": "^3.2.4"
+  }
+}

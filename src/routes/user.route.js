@@ -1,6 +1,7 @@
 import { Router } from "express";
 import {
     changeCurrentPassword,
+    getCurrentUser,
     getUserChannelProfile,
     getWatchHistory,
     loginUser,
@@ -34,9 +35,10 @@ router.route("/login").post(loginUser);
 
 //  secured routes
 router.route("/logout").post(verifyJWT, logoutUser);
-router.route("refresh-token").post(refreshAccessToken);
+router.route("/refresh-token").post(refreshAccessToken);
 router.route("/change-password").post(verifyJWT, changeCurrentPassword);
 router.route("/upadte-account").patch(verifyJWT, updateAccountDetails);
+router.route("/current-user").get(getCurrentUser)
 router
     .route("/avatar")
     .patch(verifyJWT, upload.single("avatar"), updateUserAvatar);
